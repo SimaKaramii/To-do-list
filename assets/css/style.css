@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+:root{
+    --open:red;
+    --InProgress:yellow;
+    --resolved:blue;
+    --OnHold:grey;
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*header*/
+header{
+    width:100%;
+    background: #11009E;
+    height: 60px;
+}
+/*container*/
+.container{
+    max-width: 1700px;
+    margin: auto 1rem;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.task{
+    width: 24%;
+    background: #f1f1f1;
+    padding: 5px;
+    border: 1px solid grey;
+    border-top-width: 2px;
+}
+.task#open{
+    border-top-color: var(--open);
+}
+.task#InProgress{
+    border-top-color: var(--InProgress);
+}
+.task#resolved{
+    border-top-color: var(--resolved);
+}
+.task#OnHold{
+    border-top-color: var(--OnHold);
+}
+.task .title{
+    justify-content: space-between;
+}
+.task .title h4{
+    margin: 0;
+}
+.task#open i , .task#open .NumberTask{
+    color: var(--open);
+}
+.task#InProgress i , .task#InProgress .NumberTask{
+    color: var(--InProgress);
+}
+.task#resolved i , .task#resolved .NumberTask{
+    color: var(--resolved);
+}
+.task#OnHold i , .task#OnHold .NumberTask{
+    color: var(--OnHold);
+}
+/*footer*/
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background: #11009E;
+}
+footer p{
+    font-size: 13px;
+    margin: 5px 0;
+    text-align: center;
+    color: white;
+}
+.social.flex{
+    justify-content: center;
+    margin: 10px 0;
+}
+.social div{
+    font-size: 22px;
+    background: white;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    cursor: pointer;
+
+}
+.social a{
+    color: #11009E;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+}
+.social i{
+    margin: auto;
+}

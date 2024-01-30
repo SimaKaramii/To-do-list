@@ -7,10 +7,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<header>
 
+</header>
+<div class="container flex">
+    <div class="task" id="open">
+        <div class="flex title">
+            <h4>Open (<span class="NumberTask">1</span>)</h4>
+            <div>
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="card">
+            <h6 class="TitleCard"></h6>
+            <p class="CommentCard"></p>
+            <div class="flex">
+                <select>
+                    <option>Open</option>
+                    <option>In progress</option>
+                    <option>Resolved</option>
+                    <option>On hold</option>
+                </select>
+                <div><i class="fa fa-trash" aria-hidden="true"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="task" id="InProgress">
+        <div class="flex title">
+            <h4>In progress (<span class="NumberTask">1</span>)</h4>
+            <div>
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <div class="task" id="resolved">
+        <div class="flex title">
+            <h4>Resolved (<span class="NumberTask">1</span>)</h4>
+            <div>
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <div class="task" id="OnHold">
+        <div class="flex title">
+            <h4>On Hold (<span class="NumberTask">1</span>)</h4>
+            <div>
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div>
+        <div class="social flex">
+            <div><a><i class="fa fa-google" aria-hidden="true"></i></a></div>
+            <div><a><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+            <div><a><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+            <div><a><i class="fa fa-telegram" aria-hidden="true"></i></a></div>
+            <div><a><i class="fa fa-github" aria-hidden="true"></i></a></div>
+        </div>
+    </div>
+    <p>Copyright © 2024 Sima karami</p>
+</footer>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
