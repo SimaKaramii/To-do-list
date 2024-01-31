@@ -26,11 +26,12 @@ header{
     padding: 1rem 0;
 }
 .task{
-    width: 24%;
+    width: 23.5%;
     background: #f1f1f1;
     padding: 5px;
     border: 1px solid grey;
     border-top-width: 2px;
+    overflow: auto;
 }
 .task#open{
     border-top-color: var(--open);
@@ -46,6 +47,7 @@ header{
 }
 .task .title{
     justify-content: space-between;
+    margin-bottom: 1.5rem;
 }
 .task .title h4{
     margin: 0;
@@ -61,6 +63,31 @@ header{
 }
 .task#OnHold i , .task#OnHold .NumberTask{
     color: var(--OnHold);
+}
+.card{
+    background: white;
+    border: 1px solid #a49292;
+    padding: 4px;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+.card h6{
+    margin: 0;
+    font-size: 17px;
+}
+.card p{
+    margin: 0.5rem 0;
+    font-size: 14px;
+}
+.card .flex{
+    justify-content: space-between;
+}
+.card .flex select{
+    outline: none;
+    border: 1px solid #c9adad;
+    font-size: 12px;
+    width: max-content;
+    border-radius: 3px;
 }
 /*footer*/
 footer{
