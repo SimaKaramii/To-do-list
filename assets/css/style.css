@@ -32,6 +32,7 @@ header{
     border: 1px solid grey;
     border-top-width: 2px;
     overflow: auto;
+    height: fit-content;
 }
 .task#open{
     border-top-color: var(--open);
