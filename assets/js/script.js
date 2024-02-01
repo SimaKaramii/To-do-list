@@ -14,3 +14,17 @@ $('select').change(function (){
     }
     card.hide().show("fast");
 })
+
+//open modal
+var modal = document.getElementById('modal');
+let email = document.getElementById('email');
+let text = document.getElementById('text');
+function OpenModal(){
+    modal.style.display = 'block';
+}
+function CloseModal(){
+    modal.style.display = 'none';
+    email.style.borderColor = '#424874'
+    text.innerHTML = " ";
+    email.value = " ";
+}

@@ -90,6 +90,72 @@ header{
     width: max-content;
     border-radius: 3px;
 }
+.modal{
+    display: none;
+    background: #b6a5d8eb;
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.modal-close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 25px;
+    color: #424874;
+    cursor: pointer;
+    display: block;
+}
+.model-content{
+    position: absolute;
+    width: 350px;
+    height: fit-content;
+    background: #f4eeff;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 1rem;
+}
+.model-content h3{
+    color: #424874;
+}
+.model-content p{
+    font-size: 11px;
+    color: #424874;
+    margin-bottom: 2rem;
+}
+.form-input{
+    background: #fff;
+    border: 1px solid #424874;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 5px;
+    height: 34px;
+    box-sizing: border-box;
+    margin: 1rem 0;
+}
+textarea.form-input{
+    height: 150px;
+}
+.AddToTable{
+    color : #DCD6F7;
+    background: #424874;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    margin:  0;
+
+}
 /*footer*/
 footer{
     position:absolute;

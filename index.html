@@ -17,7 +17,7 @@
     <div class="task" id="open">
         <div class="flex title">
             <h4>Open (<span class="NumberTask">1</span>)</h4>
-            <div>
+            <div  onclick="OpenModal(this)">
                 <i class="fa fa-plus-square" aria-hidden="true"></i>
             </div>
         </div>
@@ -200,6 +200,18 @@
                 </select>
                 <div><i class="fa fa-trash" aria-hidden="true"></i></div>
             </div>
+        </div>
+    </div>
+</div>
+<!--modal-->
+<div class="modal" id="modal">
+    <div class="modal-close" onclick="CloseModal()"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+    <div class="model-content">
+        <h3>Add Task</h3>
+        <input type="text" id="TitleModal" placeholder="title" class="form-input">
+        <textarea placeholder="comment" class="form-input"></textarea>
+        <div class="input-container">
+            <input class="AddToTable" type="submit" value="Add" onclick="AddToTable()" >
         </div>
     </div>
 </div>
