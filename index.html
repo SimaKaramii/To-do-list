@@ -14,10 +14,10 @@
 
 </header>
 <div class="container flex">
-    <div class="task" id="open">
+    <div class="task" option-val="0" id="open">
         <div class="flex title">
             <h4>Open (<span class="NumberTask">1</span>)</h4>
-            <div  onclick="OpenModal(this)">
+            <div class="OpenModal">
                 <i class="fa fa-plus-square" aria-hidden="true"></i>
             </div>
         </div>
@@ -61,10 +61,10 @@
             </div>
         </div>
     </div>
-    <div class="task" id="InProgress">
+    <div class="task" option-val="1" id="InProgress">
         <div class="flex title">
             <h4>In progress (<span class="NumberTask">1</span>)</h4>
-            <div>
+            <div class="OpenModal">
                 <i class="fa fa-plus-square" aria-hidden="true"></i>
             </div>
         </div>
@@ -108,10 +108,10 @@
             </div>
         </div>
     </div>
-    <div class="task" id="resolved">
+    <div class="task" option-val="2" id="resolved">
         <div class="flex title">
             <h4>Resolved (<span class="NumberTask">1</span>)</h4>
-            <div>
+            <div class="OpenModal">
                 <i class="fa fa-plus-square" aria-hidden="true"></i>
             </div>
         </div>
@@ -155,10 +155,10 @@
             </div>
         </div>
     </div>
-    <div class="task" id="OnHold">
+    <div class="task" option-val="3" id="OnHold">
         <div class="flex title">
             <h4>On Hold (<span class="NumberTask">1</span>)</h4>
-            <div>
+            <div class="OpenModal">
                 <i class="fa fa-plus-square" aria-hidden="true"></i>
             </div>
         </div>
@@ -205,13 +205,13 @@
 </div>
 <!--modal-->
 <div class="modal" id="modal">
-    <div class="modal-close" onclick="CloseModal()"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+    <div class="modal-close"><i class="fa fa-window-close" aria-hidden="true"></i></div>
     <div class="model-content">
         <h3>Add Task</h3>
         <input type="text" id="TitleModal" placeholder="title" class="form-input">
-        <textarea placeholder="comment" class="form-input"></textarea>
+        <textarea placeholder="comment" class="form-input" id="CommentModal"></textarea>
         <div class="input-container">
-            <input class="AddToTable" type="submit" value="Add" onclick="AddToTable()" >
+            <input class="AddToTable" type="submit" value="Add">
         </div>
     </div>
 </div>
