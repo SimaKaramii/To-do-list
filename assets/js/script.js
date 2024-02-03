@@ -16,7 +16,8 @@ $('select').change(function (){
 
 //open modal
 
-var state , StateVal;
+var state , StateVal , CardEdit;
+var editble = 0;
 $('.OpenModal').click(function (){
     $('.modal').show()
     state = $(this).parents('.task').attr('id')
@@ -33,22 +34,34 @@ $('.modal-close').click(function (){
 $('.AddToTable').click(function (){
     var TitleModal = $('#TitleModal').val();
     var text = $('#CommentModal').val();
-    $('#'+state).append('<div class="card">' +
-        '                <h6 class="TitleCard">'+TitleModal+'</h6>' +
-        '                <p class="CommentCard">'+text+'</p><div class="flex">\n' +
-        '                <select class="NewAdd">\n' +
-        '                    <option value="0">Open</option>\n' +
-        '                    <option value="1">In progress</option>\n' +
-        '                    <option value="2">Resolved</option>\n' +
-        '                    <option value="3">On hold</option>>\n' +
-        '                </select>\n' +
-        '                <div><i class="fa fa-trash" aria-hidden="true"></i></div>\n' +
-        '            </div></div>')
-    console.log( )
-    $('#'+state).find('select.NewAdd').val(StateVal);
+    if(editble == 1){
+        CardEdit.find('.TitleCard').text($('#TitleModal').val())
+        CardEdit.find('.CommentCard').text($('#CommentModal').val())
+        editble = 0;
+    }else{
+        $('#'+state).append('<div class="card">' +
+            '                <h6 class="TitleCard">'+TitleModal+'</h6>' +
+            '                <p class="CommentCard">'+text+'</p><div class="flex">\n' +
+            '                <select class="NewAdd">\n' +
+            '                    <option value="0">Open</option>\n' +
+            '                    <option value="1">In progress</option>\n' +
+            '                    <option value="2">Resolved</option>\n' +
+            '                    <option value="3">On hold</option>>\n' +
+            '                </select>\n' +
+            '                <div><i class="fa fa-trash" aria-hidden="true"></i></div>\n' +
+            '            </div></div>')
+        $('#'+state).find('select.NewAdd').val(StateVal);
+    }
     closeModal()
 });
 
 $('.fa-trash').click(function (){
     $(this).parents('.card').remove()
+})
+$('.edit').click(function (){
+    $('.modal').show();
+    editble = 1;
+    CardEdit = $(this).parents('.card');
+    $('#TitleModal').val(CardEdit.find('.TitleCard').text())
+    $('#CommentModal').val(CardEdit.find('.CommentCard').text())
 })
