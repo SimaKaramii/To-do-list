@@ -51,6 +51,9 @@ $('.AddToTable').click(function (){
             '                <div><i class="fa fa-trash" aria-hidden="true"></i></div>\n' +
             '            </div></div>')
         $('#'+state).find('select.NewAdd').val(StateVal);
+        $('.fa-trash').click(function (){
+            $(this).parents('.card').remove()
+        })
     }
     closeModal()
 });
@@ -64,4 +67,8 @@ $('.edit').click(function (){
     CardEdit = $(this).parents('.card');
     $('#TitleModal').val(CardEdit.find('.TitleCard').text())
     $('#CommentModal').val(CardEdit.find('.CommentCard').text())
+})
+
+$('.NumberTask').each(function () {
+    $(this).text($(this).parents('.task').find('.card').length)
 })

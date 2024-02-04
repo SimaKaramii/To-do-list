@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 :root{
-    --open:red;
-    --InProgress:yellow;
-    --resolved:blue;
-    --OnHold:grey;
+    --open: #6e1794;
+    --InProgress: #ad245d;
+    --resolved: #2f8c8c;
+    --OnHold: #91283c;
 }
 body{
     font-family: 'PT Sans', sans-serif;
@@ -92,7 +92,7 @@ header{
 }
 .modal{
     display: none;
-    background: #b6a5d8eb;
+    background: #f1f1f1cc;
     width: 100%;
     z-index: 1;
     height: 100%;
